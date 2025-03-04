@@ -9,7 +9,7 @@
 }
 
 html {
-  background-color: rgb(21, 21, 21);
+  background: linear-gradient(to bottom, rgb(21, 21, 21), #209978, rgb(21, 21, 21));
   color: white;
 }
 
