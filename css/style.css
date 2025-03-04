@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+html {
+  background-color: rgb(21, 21, 21);
+  color: white;
+}
+
+.container {
+    max-width: 1224px;
+    width: 90%; /*if the user's visual is 1224px it will take up 90% of the screen*/
+    margin: auto; /* to center*/
+    padding: 40px 0;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+h3 {
+  max-width: 750px;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 20px;  
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 3px solid #17795E;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo img:hover {
+    transform: scale(1.065);
+}
+
+/* Tooltip text styling */
+.photo {
+    position: relative;   
+}
+
+.photo .hover-text {
+    position: absolute;
+    top: 80%; /*i tried bottom: 0; still looks good*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    /* visibility: hidden; Hide by default */
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+    text-align: center;
+}
+
+.photo:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+.button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+    border: 1px solid #17795E;
+    background-color: #209978;
+    overflow: hidden;
+
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(22px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #17795E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 20px;
+    fill: #fff;
+  }
+  
+  .button:hover {
+    background: #17795E;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active .button__icon {
+    background-color: #146c54;
+  }
+  
+  .button:active {
+    border: 1px solid #146c54;
+  }
+
+
+@media (max-width:568px) {
+    .photo-gallery {
+        flex-direction: column;
+    }
+}
