@@ -13,6 +13,10 @@ html {
   color: white;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 .container {
     max-width: 1224px;
     width: 90%; /*if the user's visual is 1224px it will take up 90% of the screen*/
