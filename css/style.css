@@ -23,7 +23,6 @@ html {
     margin: auto; /* to center*/
     padding: 40px 0;
     text-align: center;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,6 +73,7 @@ i {
 
 .photo .hover-text {
     position: absolute;
+    /* bottom: 0; */
     top: 80%; /*i tried bottom: 0; still looks good*/
     left: 50%;
     transform: translate(-50%, -50%);
@@ -159,5 +159,9 @@ i {
 @media (max-width:568px) {
     .photo-gallery {
         flex-direction: column;
+    }
+    .photo img {
+      width: 65%; /* Adjust the width to 80% of the container */
+      height: 80%; /* Maintain aspect ratio */
     }
 }
