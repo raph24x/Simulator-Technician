@@ -84,7 +84,7 @@ i {
 }
 
 .photo img:hover {
-    box-shadow: 5px 5px 15px 10px rgba(255, 196, 0, 0.5);
+    box-shadow: 0px 0px 20px 15px rgba(10, 220, 223, 0.5);
     transform: scale(1.065);
 }
 
