@@ -9,8 +9,18 @@
 }
 
 html {
-  background: linear-gradient(to bottom, rgb(21, 21, 21), #209978, rgb(21, 21, 21));
+  /* background: linear-gradient(to bottom, rgb(21, 21, 21), #209978, rgb(21, 21, 21)); */
+  background: url(/img/board.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   color: white;
+  text-shadow: 
+    4px 4px 5px rgb(0, 0, 0), 
+    -4px -4px 5px rgb(0, 0, 0),  
+    4px -4px 5px rgb(0, 0, 0),
+    -4px 4px 5px rgb(0, 0, 0);
+    /*I AM SO HAPPY DISCOVER MYSELF THE NEON EFFECT*/
 }
 
 .nowrap {
@@ -33,17 +43,28 @@ html {
     margin-bottom: 2rem;
 }
 
+h1 {
+  font-size: 3.5rem;
+  /* max-width: 800px; */
+  color: rgb(0, 255, 247);
+  text-shadow: 
+  2px 2px 5px rgb(12, 124, 126), 
+  -2px -2px 5px rgb(12, 124, 126),  
+  2px -2px 5px rgb(12, 124, 126),
+  -2px 2px 5px rgb(12, 124, 126);
+}
+
 h3 {
   max-width: 800px;
 }
 
 i {
-    color: #209978;
+    visibility: hidden;
 }
 
 .photo-gallery {
     display: flex;
-    gap: 20px;  
+    gap: 20px;
 }
 
 .column {
@@ -58,7 +79,7 @@ i {
     height: 100%;
     border-radius: 5px;
     object-fit: cover;
-    border: 3px solid rgb(21, 21, 21);
+    border: 3px solid rgb(12, 124, 126);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -93,7 +114,7 @@ i {
     transition-delay: 0s;
 }
 
-/* From Uiverse.io by andrew-demchenk0 */ 
+/* button design with animation */ 
 .button {
     position: relative;
     width: 150px;
@@ -157,11 +178,62 @@ i {
 
 
 @media (max-width:568px) {
-    .photo-gallery {
-        flex-direction: column;
-    }
-    .photo img {
-      width: 65%; /* Adjust the width to 80% of the container */
-      height: 80%; /* Maintain aspect ratio */
-    }
+  /* html {
+    background: url(/img/elec.jpg);
+    background-size: 100% auto;
+    background-position: cover;
+    text-shadow: 
+    2px 2px 0 black, 
+    -2px -2px 0 black,  
+    2px -2px 0 black,
+    -2px 2px 0 black;
+  } */
+
+  html {
+    position: relative;
+    color: white;
+    text-shadow: 
+    2px 2px 5px rgb(0, 0, 0), 
+    -2px -2px 5px rgb(0, 0, 0),  
+    2px -2px 5px rgb(0, 0, 0),
+    -2px 2px 5px rgb(0, 0, 0);
+    /*I AM SO HAPPY DISCOVER MYSELF THE NEON EFFECT*/
+  }
+  
+  html::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/img/elec.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(2px); /* Apply blur effect only to the background */
+    z-index: -1; /* Ensure the blurred background is behind the content */
+  }
+
+  .photo img {
+    width: 65%; /* Adjust the width to 80% of the container */
+    height: 100%; /* Maintain aspect ratio */
+    border: 3px solid #17795E;
+  }
+
+  h3 {
+    font-size: 1rem; /* Adjust the size to your preference */
+   }
+
+  i {
+    font-size: 0.8rem;
+    color: inherit;
+    visibility: visible;
+   }
+
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
