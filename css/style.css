@@ -219,7 +219,6 @@ i {
   .photo img {
     width: 65%; /* Adjust the width to 80% of the container */
     height: 100%; /* Maintain aspect ratio */
-    border: 3px solid #17795E;
   }
 
   h1 {
